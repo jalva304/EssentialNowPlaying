@@ -134,6 +134,7 @@
             this.mediaPlayerBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mediaPlayerBox.FormattingEnabled = true;
             this.mediaPlayerBox.Items.AddRange(new object[] {
+            "Bandcamp",
             "Deezer",
             "foobar2000",
             "Google Play",
@@ -212,6 +213,7 @@
             this.defaultMediaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.defaultMediaBox.FormattingEnabled = true;
             this.defaultMediaBox.Items.AddRange(new object[] {
+            "Bandcamp",
             "Deezer",
             "foobar2000",
             "Google Play",

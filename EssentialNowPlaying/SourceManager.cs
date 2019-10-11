@@ -101,6 +101,11 @@ namespace Essential_Now_Playing
                     wah = new WebAppHandler(path, preview, "Hype Machine");
                     wah.start();
                     break;
+                case "Bandcamp":
+                    isWebPlayer = true;
+                    wah = new WebAppHandler(path, preview, "Bandcamp");
+                    wah.start();
+                    break;
                 default:
                     break;
             }

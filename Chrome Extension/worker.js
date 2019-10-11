@@ -19,7 +19,8 @@ players = {
     "youtube": youtube,
     "deezer": deezer,
     "app.plex.tv": plex,
-    'hypem': hypem
+    'hypem': hypem,
+    'bandcamp': bandcamp
 };
 
 function mixcloud() {
@@ -202,6 +203,25 @@ function hypem() {
     var isPlaying = $('#playerPlay').hasClass('pause');
     if (isPlaying) {
         songTitle = $('#player-nowplaying').children().slice(0,3).text();
+    } else {
+        songTitle = 'Paused';
+    }
+
+    return {
+        song: songTitle,
+        webPlayer: wp
+    }
+}
+
+function bandcamp() {
+    var songTitle, artist, song;
+    var wp = "Bandcamp"
+    
+    var isPlaying = $('div.playbutton').hasClass('playing');
+    if (isPlaying) {
+        artist = $('p.detail-artist > a').text();
+        song = $('span.title').text();
+        songTitle = artist + ' - ' + song;
     } else {
         songTitle = 'Paused';
     }
